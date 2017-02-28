@@ -1,3 +1,3 @@
-define(['jquery'], function($) {
-    console.log('list模块加载')
+defdefine(['jquery','common','nprogress'], function($,undefined,nprogress) {
+    nprogress.done();
 });
