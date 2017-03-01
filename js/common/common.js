@@ -2,14 +2,18 @@
  * Created by Administrator on 2017/2/26.
  */
 //左侧导航下拉列表
-define(["jquery", 'jqueryCookie'],function($){
+define(["jquery", 'jqueryCookie'],function($,undefined){
+    //ajax请求loading
+    $(document).ajaxStart(function(){
+        $(".overlay").show();
+    }).ajaxStop(function(){
+        $(".overlay").hide();
+    });
     $(".navs a").on("click",function(){
         $(this).next().slideToggle();
     });
-
     var pathname=window.location.pathname;
     $(".navs a").removeClass("active").filter('[href="'+pathname+'"]').addClass("active").parents("ul").show();
-
     $("#logout").on("click",function(){
         $.post("/v6/logout",function(data){
             if(data.code==200){
