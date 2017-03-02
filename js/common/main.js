@@ -12,6 +12,8 @@ requirejs.config({
         jqueryCookie: 'lib/jquery-cookie/jquery.cookie',
         nprogress: 'lib/nprogress/nprogress',
         template: 'lib/artTemplate-3.0.1/template',
+        datepicker: 'lib/bootstrap-datepicker/js/bootstrap-datepicker',
+        datepickerLanguage: 'lib/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
         // 自己写的路径配置
         courseAddStep1: 'js/course/add_step1',
         courseAddStep2: 'js/course/add_step2',
@@ -28,12 +30,16 @@ requirejs.config({
         teacherList: 'js/teacher/list',
         userList: 'js/user/list',
         userProfile: 'js/user/profile',
+        util: 'js/common/util',
         common: 'js/common/common',
         index: 'js/index',
     },
     shim:{
         bootstrap:{
             deps:["jquery"],
+        },
+        detepickerLanguage:{
+            deps:['jquery','datepicker'],
         }
     }
 });
