@@ -1,4 +1,4 @@
-define(['jquery','common','nprogress',"util","template"], function($,undefined,nprogress,util,template) {
+define(['jquery','common','nprogress',"util","template","datepicker","datepickerLanguage"], function($,undefined,nprogress,util,template,datepicker,undefined) {
     // 该页所有的js加载完毕，进度条结束。
     nprogress.done();
     /*
@@ -18,12 +18,22 @@ define(['jquery','common','nprogress',"util","template"], function($,undefined,n
             if(data.code==200){
                 var html=template("teacher-form-tpl",data.result);
                 $(".teacher-add").html(html);
+                $("#datepicter").datepicker({
+                    language:"zh-CN",
+                    endDate:new Date(),
+                    formmat:"yyyy-mm-dd"
+                });
             }
         })
     }
     else{
         var html=template("teacher-form-tpl",{});
         $(".teacher-add").html(html);
+        $("#datepicter").datepicker({
+            language:"zh-CN",
+            endDate:new Date(),
+            format:"yyy-mm-dd"
+        });
     }
     //添加讲师
     $(".teacher-add").on("submit","#teacher-add-form",function(){
