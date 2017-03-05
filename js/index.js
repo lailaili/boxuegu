@@ -3,6 +3,6 @@
  */
 define(['jquery', 'common', 'nprogress'], function($, undefined, nprogress) {
 
-    // ╦црЁкЫсп╣дjs╪стьмЙ╠оё╛╫Ь╤хлУ╫АйЬ║ё
+    // О©╫О©╫рЁО©╫О©╫О©╫п╣О©╫jsО©╫О©╫О©╫О©╫О©╫О©╫оёО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
     nprogress.done();
 });

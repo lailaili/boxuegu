@@ -21,7 +21,7 @@ define(['jquery','common','nprogress',"util","template","datepicker","datepicker
                 $("#datepicter").datepicker({
                     language:"zh-CN",
                     endDate:new Date(),
-                    formmat:"yyyy-mm-dd"
+                    format:"yyyy-mm-dd"
                 });
             }
         })
@@ -32,7 +32,7 @@ define(['jquery','common','nprogress',"util","template","datepicker","datepicker
         $("#datepicter").datepicker({
             language:"zh-CN",
             endDate:new Date(),
-            format:"yyy-mm-dd"
+            format:"yyyy-mm-dd"
         });
     }
     //添加讲师

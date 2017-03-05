@@ -3,10 +3,10 @@
  */
 requirejs.config({
     baseUrl:"/",
-    //µÚÈı·½¿âµÄÂ·¾¶ÅäÖÃ
+    //?????????Â·??????
     paths: {
 
-        // µÚÈı·½¿âµÄÂ·¾¶ÅäÖÃ
+        // ?????????Â·??????
         jquery: 'lib/jquery/jquery.min',
         bootstrap: 'lib/bootstrap/js/bootstrap.min',
         jqueryCookie: 'lib/jquery-cookie/jquery.cookie',
@@ -14,7 +14,10 @@ requirejs.config({
         template: 'lib/artTemplate-3.0.1/template',
         datepicker: 'lib/bootstrap-datepicker/js/bootstrap-datepicker',
         datepickerLanguage: 'lib/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
-        // ×Ô¼ºĞ´µÄÂ·¾¶ÅäÖÃ
+        region:"lib/region/jquery.region",
+        ckeditor: 'lib/ckeditor/ckeditor',
+        uploadify:"lib/uploadify/jquery.uploadify",
+        // ???Ğ´??Â·??????
         courseAddStep1: 'js/course/add_step1',
         courseAddStep2: 'js/course/add_step2',
         courseAddStep3: 'js/course/add_step3',
@@ -40,21 +43,25 @@ requirejs.config({
         },
         detepickerLanguage:{
             deps:['jquery','datepicker'],
+        },
+        ckeditor:{
+            deps:["jquery"],
+            exports:"CKEDITOR"
         }
     }
 });
 require(["nprogress"],function(nprogress){
     nprogress.start();
 })
-//ËùÓĞµÄÒ³Ãæ¶¼ĞèÒªÕâÁ½¸öjs£¬ÏÈ¼ÓÔØËûÃÇ
+//???Ğµ???æ¶¼?????????js???????????
 require(["jquery","bootstrap","common"]);
-//ÕâÀï»ñÈ¡Ò³ÃæµÄURl£¬È»ºó¶ÔÓ¦µÄ¼ÓÔØjs
+//??????????URl????????????js
 (function(window){
    var pathname=window.location.pathname;
     require(['jquery', 'jqueryCookie'],
         function($,underfined){
             var sessID= $.cookie("PHPSESSID");
-            //µÇÂ½×´Ì¬Ç°¶ËĞ§Ñé
+            //????????Ğ§??
             if(pathname==="/html/home/login.html"&&sessID){
                 location.href="/";
             }else if(pathname!=="/html/home/login.html"&&!sessID){
@@ -62,7 +69,7 @@ require(["jquery","bootstrap","common"]);
             };
             switch(pathname) {
                 case '/html/user/list.html':
-                    //¸ù¾İÉÏÃæµÄÂ·¾¶ÖªµÀ´ú±íuserList
+                    //?????????Â·?????????userList
                     require(['userList']);
                     break;
                 case '/html/user/profile.html':
