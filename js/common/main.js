@@ -7,16 +7,16 @@ requirejs.config({
     paths: {
 
         // ?????????·??????
-        jquery: 'lib/jquery/jquery.min',
-        bootstrap: 'lib/bootstrap/js/bootstrap.min',
-        jqueryCookie: 'lib/jquery-cookie/jquery.cookie',
-        nprogress: 'lib/nprogress/nprogress',
-        template: 'lib/artTemplate-3.0.1/template',
-        datepicker: 'lib/bootstrap-datepicker/js/bootstrap-datepicker',
+        jquery: 'node_modules/jquery/dist/jquery.min',
+        bootstrap: 'node_modules/bootstrap/dist/js/bootstrap.min',
+        jqueryCookie: 'node_modules/jquery.cookie/jquery.cookie',
+        nprogress: 'node_modules/nprogress/nprogress',
+        template: 'node_modules/art-template/dist/template',
+        datepicker: 'node_modules/bootstrap-datepicker/js/bootstrap-datepicker',
         datepickerLanguage: 'lib/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
-        region:"lib/region/jquery.region",
-        ckeditor: 'lib/ckeditor/ckeditor',
-        uploadify:"lib/uploadify/jquery.uploadify",
+        region:"node_modules/region/jquery.region",
+        ckeditor: 'node_modules/ckeditor/ckeditor',
+        uploadify:"node_modules/uploadify/jquery.uploadify",
         // ???д??·??????
         courseAddStep1: 'js/course/add_step1',
         courseAddStep2: 'js/course/add_step2',

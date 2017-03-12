@@ -1,0 +1,34 @@
+{
+  "name": "boxuegu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lailaili/boxuegu_laili.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lailaili/boxuegu_laili/issues"
+  },
+  "homepage": "https://github.com/lailaili/boxuegu_laili#readme",
+  "dependencies": {
+    "art-template": "^3.1.3",
+    "bootstrap": "^3.3.7",
+    "bootstrap-datepicker": "^1.6.4",
+    "ckeditor": "^4.6.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1",
+    "jquery.cookie": "^1.4.1",
+    "nprogress": "^0.2.0",
+    "region": "^2.1.2",
+    "requirejs": "^2.3.3",
+    "uploadify": "^1.0.7"
+  },
+  "devDependencies": {},
+  "description": ""
+}
